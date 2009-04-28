@@ -1,0 +1,213 @@
+  [4;36;1mSQL (0.000278)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000346)[0m   [0mCREATE DATABASE `sqladvent_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000365)[0m   [0mCREATE DATABASE `sqladvent_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000360)[0m   [0mCREATE DATABASE `sqladvent_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000345)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.054363)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.005513)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000478)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000534)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;36;1mSQL (0.000146)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002423)[0m   [0mCREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `desc` varchar(255) DEFAULT NULL NULL, `n` int(11) DEFAULT NULL NULL, `s` int(11) DEFAULT NULL NULL, `e` int(11) DEFAULT NULL NULL, `w` int(11) DEFAULT NULL NULL, `ne` int(11) DEFAULT NULL NULL, `nw` int(11) DEFAULT NULL NULL, `se` int(11) DEFAULT NULL NULL, `sw` int(11) DEFAULT NULL NULL, `u` int(11) DEFAULT NULL NULL, `d` int(11) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000843)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821034514')[0m
+  [4;35;1mSQL (0.000283)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000407)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002162)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (0.003132)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.000371)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000350)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000257)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001850)[0m   [0;1mDROP TABLE `rooms`[0m
+  [4;35;1mSQL (0.001022)[0m   [0mDELETE FROM schema_migrations WHERE version = '20080821034514'[0m
+  [4;36;1mSQL (0.000273)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000383)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;36;1mSQL (0.000140)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002158)[0m   [0mCREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `desc` text DEFAULT NULL NULL, `n` int(11) DEFAULT NULL NULL, `s` int(11) DEFAULT NULL NULL, `e` int(11) DEFAULT NULL NULL, `w` int(11) DEFAULT NULL NULL, `ne` int(11) DEFAULT NULL NULL, `nw` int(11) DEFAULT NULL NULL, `se` int(11) DEFAULT NULL NULL, `sw` int(11) DEFAULT NULL NULL, `u` int(11) DEFAULT NULL NULL, `d` int(11) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000535)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821034514')[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000343)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000233)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000261)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001724)[0m   [0;1mDROP TABLE `rooms`[0m
+  [4;35;1mSQL (0.000862)[0m   [0mDELETE FROM schema_migrations WHERE version = '20080821034514'[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000386)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;36;1mSQL (0.000140)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001925)[0m   [0mCREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `desc` text DEFAULT NULL NULL, `n` int(11) DEFAULT NULL NULL, `s` int(11) DEFAULT NULL NULL, `e` int(11) DEFAULT NULL NULL, `w` int(11) DEFAULT NULL NULL, `u` int(11) DEFAULT NULL NULL, `d` int(11) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821034514')[0m
+  [4;36;1mSQL (0.001235)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000334)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000280)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000101)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;36;1mSQL (0.000062)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001514)[0m   [0mCREATE TABLE `game_states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `starting_room_id` int(11) NOT NULL, `current_room_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000372)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821041334')[0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000985)[0m   [0mSHOW FIELDS FROM `game_states`[0m
+  [4;36;1mSQL (0.001401)[0m   [0;1mdescribe `game_states`[0m
+  [4;35;1mSQL (0.000665)[0m   [0mSHOW KEYS FROM `game_states`[0m
+  [4;36;1mSQL (0.002741)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.001888)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.001152)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000269)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001826)[0m   [0;1mDROP TABLE `game_states`[0m
+  [4;35;1mSQL (0.001346)[0m   [0mDELETE FROM schema_migrations WHERE version = '20080821041334'[0m
+  [4;36;1mSQL (0.000290)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000394)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001691)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.002694)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000099)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002322)[0m   [0mCREATE TABLE `game_states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000587)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821041334')[0m
+Migrating to CreateGameVariables (20080821043503)
+  [4;35;1mSQL (0.000283)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001986)[0m   [0;1mCREATE TABLE `game_variables` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `game_state_id` int(11) NOT NULL, `name` varchar(255) DEFAULT NULL NULL, `int_value` int(11) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.006841)[0m   [0mCREATE INDEX `index_game_variables_on_game_state_id` ON `game_variables` (`game_state_id`)[0m
+  [4;36;1mSQL (0.000580)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821043503')[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001525)[0m   [0mSHOW FIELDS FROM `game_states`[0m
+  [4;36;1mSQL (0.001760)[0m   [0;1mdescribe `game_states`[0m
+  [4;35;1mSQL (0.000428)[0m   [0mSHOW KEYS FROM `game_states`[0m
+  [4;36;1mSQL (0.001757)[0m   [0;1mSHOW FIELDS FROM `game_variables`[0m
+  [4;35;1mSQL (0.001812)[0m   [0mdescribe `game_variables`[0m
+  [4;36;1mSQL (0.000439)[0m   [0;1mSHOW KEYS FROM `game_variables`[0m
+  [4;35;1mSQL (0.001968)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (0.003676)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.001224)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000369)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000099)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameVariables (20080821043503)
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001639)[0m   [0;1mSHOW FIELDS FROM `game_states`[0m
+  [4;35;1mSQL (0.001438)[0m   [0mdescribe `game_states`[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW KEYS FROM `game_states`[0m
+  [4;35;1mSQL (0.001471)[0m   [0mSHOW FIELDS FROM `game_variables`[0m
+  [4;36;1mSQL (0.001848)[0m   [0;1mdescribe `game_variables`[0m
+  [4;35;1mSQL (0.000395)[0m   [0mSHOW KEYS FROM `game_variables`[0m
+  [4;36;1mSQL (0.002201)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.001871)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.000467)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000358)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameVariables (20080821043503)
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000302)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001700)[0m   [0;1mSHOW FIELDS FROM `game_states`[0m
+  [4;35;1mSQL (0.001394)[0m   [0mdescribe `game_states`[0m
+  [4;36;1mSQL (0.000665)[0m   [0;1mSHOW KEYS FROM `game_states`[0m
+  [4;35;1mSQL (0.001529)[0m   [0mSHOW FIELDS FROM `game_variables`[0m
+  [4;36;1mSQL (0.002687)[0m   [0;1mdescribe `game_variables`[0m
+  [4;35;1mSQL (0.000406)[0m   [0mSHOW KEYS FROM `game_variables`[0m
+  [4;36;1mSQL (0.001711)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.001903)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.000497)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000337)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000312)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameVariables (20080821043503)
+  [4;35;1mSQL (0.000064)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002886)[0m   [0;1mDROP TABLE `game_variables`[0m
+  [4;35;1mSQL (0.000909)[0m   [0mDELETE FROM schema_migrations WHERE version = '20080821043503'[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000243)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001502)[0m   [0;1mSHOW FIELDS FROM `game_states`[0m
+  [4;35;1mSQL (0.001082)[0m   [0mdescribe `game_states`[0m
+  [4;36;1mSQL (0.000623)[0m   [0;1mSHOW KEYS FROM `game_states`[0m
+  [4;35;1mSQL (0.002634)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (0.006762)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000361)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameStates (20080821041334)
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001837)[0m   [0;1mDROP TABLE `game_states`[0m
+  [4;35;1mSQL (0.001895)[0m   [0mDELETE FROM schema_migrations WHERE version = '20080821041334'[0m
+  [4;36;1mSQL (0.000362)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000410)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001502)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.001806)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.000783)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000340)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRooms (20080821034514)
+  [4;35;1mSQL (0.000062)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGameSlots (20080821041334)
+  [4;36;1mSQL (0.000058)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.009576)[0m   [0mCREATE TABLE `game_slots` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000467)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821041334')[0m
+Migrating to CreateGameVariables (20080821043503)
+  [4;35;1mSQL (0.000164)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001237)[0m   [0;1mCREATE TABLE `game_variables` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `game_slot_id` int(11) NOT NULL, `name` varchar(255) DEFAULT NULL NULL, `int_value` int(11) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.004206)[0m   [0mCREATE INDEX `index_game_variables_on_game_slot_id` ON `game_variables` (`game_slot_id`)[0m
+  [4;36;1mSQL (0.000372)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080821043503')[0m
+  [4;35;1mSQL (0.000186)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001493)[0m   [0mSHOW FIELDS FROM `game_slots`[0m
+  [4;36;1mSQL (0.001369)[0m   [0;1mdescribe `game_slots`[0m
+  [4;35;1mSQL (0.000592)[0m   [0mSHOW KEYS FROM `game_slots`[0m
+  [4;36;1mSQL (0.001010)[0m   [0;1mSHOW FIELDS FROM `game_variables`[0m
+  [4;35;1mSQL (0.001310)[0m   [0mdescribe `game_variables`[0m
+  [4;36;1mSQL (0.000717)[0m   [0;1mSHOW KEYS FROM `game_variables`[0m
+  [4;35;1mSQL (0.000993)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (0.002512)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.010939)[0m   [0mSHOW KEYS FROM `rooms`[0m

@@ -1,0 +1,88 @@
+-- sqladvent.sql - Adventures in SQL!
+-- 
+-- Installation: create a database, import this file into it, start
+-- your favorite SQL console program, and SELECT newgame(); to begin.
+-- 
+-- What this file contains:
+-- 
+-- The sqladvent schema, including the stored procedures and views to
+-- play the game.
+-- 
+-- The data for "Adventures in SQL", a simple proof-of-concept text
+-- adventure playable at your SQL prompt.
+-- 
+-- 
+-- Why did I do this?
+-- 
+-- Mostly out of the perversity to see if it could be done. In 2005, I
+-- was musing about the fact that Pl/Sql was Turing complete, and that
+-- this means you should be able to build anything out of it. To prove
+-- it to myself, I built a simple adventure game. The original version
+-- was written in PL/SQL on a PostgreSQL 8.2 database. This rewrite
+-- will be MySQL 5.0.45 (unless I find that it cannot be done due to
+-- MySQL's limitations).
+-- 
+-- The original version had rooms, objects and inventory; You could
+-- examine exits, walk to neighboring rooms, and pick up items on the
+-- ground. This version will replicate these features and add in
+-- object interaction, game state, combat, and a very brief and thin
+-- plot.
+-- 
+-- 
+-- 
+-- !!! STOP! !!! 
+-- 
+-- !!! SPOILER ALERT! !!!
+-- 
+-- Okay, this next bit presents a bit of a problem. See, I would never
+-- download and install a SQL file on my database server without
+-- checking its contents carefully. But if you read through this file,
+-- you'll ruin the surprise ending! Quite the conundrum. At this
+-- point, you have some options:
+-- 
+-- 1. Read through the SQL file to make sure it's safe. This is
+-- probably the safest bet, but also the least fun.
+-- 
+-- 2. Trust me. HAHAHAHAHA! Yeah, I know. Hilarious!
+-- 
+-- 3. Run it on somebody else's database server. This is the best of
+-- both worlds: you don't ruin any spoilers, and no "important"
+-- database servers get trashed. It's win/win!
+--
+-- If it helps, I promise to try not to put anything in this file that
+-- will break stuff on your server. No guarantees, though, because I
+-- have no idea what's on your server. If you don't have a current
+-- backup before you install this file, you deserve whatever happens
+-- to you. In fact, you know what? I changed my mind, I'm going to
+-- drop three tables at random from other databases on your server.
+-- 
+-- 
+-- Still here? All right, here's a rundown of what's in this file:
+-- 
+-- 1. Tables for storing the game definitions. You know, tables like
+--    "objects", "mobiles", and "rooms".
+-- 
+-- 2. Tables for storing game state. Subtly different. Stuff like
+--    score, the current locations of objects and mobiles, and the
+--    states of things that can have state, like whether a door is
+--    open or closed, a chest is locked or unlocked, and whether or
+--    not you touched Melvin's stapler, even though the Secretary told
+--    you not to, the office memo explictly forbade you, the game
+--    clearly warned you not to on three separate occasions AND I just
+--    gave you a HUGE hint right here and now that you shouldn't have
+--    done it. But you did it anyway, didn't you. Damn you people! Why
+--    do I even bother?  I don't even need game state for this kind of
+--    crap! Put a big sign on Melvin's stapler that says "Melvin's
+--    stapler, do not touch!" and I might as well just set the state
+--    of Melvin's stapler to "touched" and be done with it! I should
+--    have just killed your character in the first room, you know
+--    that?  Would have saved us all a ton of trouble and hassle. I
+--    mean, seriously.
+-- 
+-- 3. Stored procedures for the game commands.
+-- 
+-- 4. Views for the game output.
+-- 
+-- 5. Code to delete three tables at random from your database
+--    server. Just kidding. Probably.
+-- 

@@ -1,0 +1,89 @@
+Adventures in SQL - Notes
+
+Simple text adventure game, written in SQL and playable directly from
+the SQL console.
+
+How to play:
+
+To install, create a new MySQL 5.1 (or later) database and import
+sqladvent.sql into it. Fire up a SQL console, select the new database,
+and type:
+
+SELECT newgame();
+
+...and you're off and running.
+
+Commands:
+
+SELECT save();
+SELECT score();
+SELECT inventory();
+SELECT take(object); -- E.g. SELECT take("key");
+SELECT drop(object); -- E.g. SELECT drop("key");
+SELECT give(object, target); -- E.g. SELECT give("key", "Bob");
+SELECT use(object, target); -- E.g. SELECT use("key", "door");
+SELECT wear(object); -- E.g. SELECT wear("fine hat");
+SELECT wield(object); -- E.g. SELECT wield("dagger");
+SELECT hit(creature); -- E.g. SELECT hit("troll");
+SELECT speak(creature); -- E.g. SELECT speak("troll");
+SELECT look();
+SELECT exits();
+SELECT go(direction); -- E.g. SELECT go("n"); SELECT go("north");
+
+SELECT n(); -- shorthand for SELECT go("north");.
+
+-- Directions supported:
+n, s, e, w, ne, nw, se, sw, u, d;
+north, south, east, west, northeast, northwest, southeast, southwest,
+up, down.
+
+
+The game plan:
+
+You are a programmer at Xyzzyxoft. You arrive at work one Saturday to
+discover that you are the only person left on the campus. What has
+happened to the rest of the employees who are supposed to be working
+overtime? You find a USB key on the ground outside
+
+Puzzles:
+
+- You need to make fire in the server room to scare the trolls, but
+  the automatic fire retardant system will put out your torch.
+
+- A pesky AI must be tricked with semantics; not sure the exact puzzle
+  here but something along the lines of the door in HGTTG who wants
+  you to prove that you are sentient. Perhaps the AI will deactivate
+  the fire retardant system if you show it a fire extinguisher with
+  the word "AUTOMATIC" written on the side of it?
+
+
+HINTS:
+
+- You can hit more than just creatures. (Some other things that might
+  be worth hitting: the snack machine, the fire alarm glass, Bob's
+  stuck filing cabinet, the mainframe...)
+
+- 
+
+FAQ:
+
+Q. What do I do if it doesn't work?
+A. Try to debug it yourself. If that fails, feel free to contact
+anyone besides me.
+
+Q. Are any other database engines supported?
+A. No. I wrote the original version in PostgreSQL 8.1, but this
+version has been lost to history due to me not bothering to backup my
+scratch/tinkering project folder.
+
+Q. Does in run on MySQL 4.x?
+A. I doubt it.
+
+Q. Why did you do this?
+A. Because I wanted to prove Greenspun's Tenth Rule in as absurd terms
+as I could without actually resorting to a language designed
+specifically to prove Greenspun's Tenth Rule in as absurd terms as
+possible. (E.g. Brainf*ck)
+
+
+

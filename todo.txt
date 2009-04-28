@@ -1,0 +1,9 @@
+Todos and Future Ideas for SqlAdvent
+----------------------------------------------------------------------
+
+- Add ON DELETE CASCADE and other foreign key fun to the
+  project. Writing SP's that find the parent, delete the children,
+  then delete the parent is very Railsish. This is a pure SQL database
+  project; use referential integrity to best advantage.
+
+
